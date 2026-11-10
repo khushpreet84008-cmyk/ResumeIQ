@@ -1,0 +1,32 @@
+/* ================= NAVY & WHITE THEME OVERRIDES ================= */
+.nav { background: rgba(255,255,255,.92); }
+.logo-mark { background: var(--ink); }
+.btn-small { background: var(--primary); }
+.btn-small:hover { background: var(--primary-dark); }
+
+/* Navy hero */
+.hero { background: linear-gradient(135deg, #071c4a 0%, #0b2a6b 55%, #1e4fb5 100%); color: #fff; }
+.hero .blob { opacity: .25; }
+.hero .blob-1 { background: #3b82f6; }
+.hero .blob-2 { background: #60a5fa; }
+.hero h1 { color: #fff; }
+.hero .grad { background: linear-gradient(135deg, #ffffff 0%, #9cc2ff 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero .lead { color: #d6e2fb; }
+.hero .pill { background: rgba(255,255,255,.12); color: #fff; border-color: rgba(255,255,255,.28); }
+.hero .btn-primary { background: #fff; color: var(--primary); box-shadow: 0 8px 22px rgba(0,0,0,.25); }
+.hero .btn-primary:hover { background: #eaf1fc; }
+.hero .btn-ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.55); }
+.hero .btn-ghost:hover { background: rgba(255,255,255,.12); border-color: #fff; }
+.hero .hero-points { color: #c4d5f5; }
+.hero .hero-points li::before { color: #7fe0b0; }
+
+/* White sections with soft blue tint */
+.section-tint { background: linear-gradient(180deg, #e8effb 0%, #ffffff 100%); }
+.results { background: #ffffff; }
+.card, .step, .feature, .job, .upload-card { border-color: var(--line); }
+.job.top { border-color: var(--primary); }
+.apply-links a:first-child { background: var(--primary); border-color: var(--primary); }
+.footer { background: #071c4a; }
+
+.hero .hero-card { color: var(--ink); }
+.hero .hero-card .mini-num { color: var(--ink); }

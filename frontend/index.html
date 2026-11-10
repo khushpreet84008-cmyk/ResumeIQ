@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ResumeIQ - AI Resume Analyzer & Job Recommender</title>
+  <meta name="description" content="Upload your resume, get an instant AI score, improvement tips and job recommendations with direct apply links." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/forms.css" />
+  <link rel="stylesheet" href="css/results.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="logo">
+        <span class="logo-mark">R</span>
+        <span>Resume<b>IQ</b></span>
+      </a>
+      <nav class="nav-links">
+        <a href="#how">How it works</a>
+        <a href="#analyze">Analyze</a>
+        <a href="#features">Features</a>
+        <a href="#analyze" class="btn btn-small">Upload Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="pill">AI-powered career assistant</span>
+        <h1>Get your resume <span class="grad">scored</span> and find jobs that <span class="grad">fit you</span></h1>
+        <p class="lead">Upload your resume and in seconds get an ATS-style score, personalised improvement tips and a list of matching jobs with direct apply links.</p>
+        <div class="hero-actions">
+          <a href="#analyze" class="btn btn-primary btn-lg">Analyze My Resume</a>
+          <a href="#how" class="btn btn-ghost btn-lg">See how it works</a>
+        </div>
+        <ul class="hero-points">
+          <li>Free and private</li>
+          <li>PDF, DOCX, TXT</li>
+          <li>Results in seconds</li>
+        </ul>
+      </div>
+
+      <div class="hero-card" aria-hidden="true">
+        <div class="mini-ring">
+          <svg viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="50" class="mini-bg" />
+            <circle cx="60" cy="60" r="50" class="mini-fg" />
+          </svg>
+          <div class="mini-num">86<small>/100</small></div>
+        </div>
+        <div class="mini-label">Resume Score</div>
+        <div class="mini-chips">
+          <span>React</span><span>Node.js</span><span>MongoDB</span><span>Git</span>
+        </div>
+        <div class="mini-job"><b>Full Stack Developer</b><em>92% match</em></div>
+        <div class="mini-job"><b>MERN Stack Developer</b><em>88% match</em></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="how">
+    <div class="container">
+      <h2 class="section-title">How it works</h2>
+      <p class="section-sub">Three simple steps from upload to application.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-icon">1</div>
+          <h3>Upload</h3>
+          <p>Drop your resume in PDF, DOCX or TXT format.</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">2</div>
+          <h3>Analyze</h3>
+          <p>Our engine reads your skills, structure and achievements and gives a score out of 100.</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">3</div>
+          <h3>Apply</h3>
+          <p>Get matching job roles with one-click links to LinkedIn, Naukri, Indeed and more.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UPLOAD -->
+  <section class="section section-tint" id="analyze">
+    <div class="container narrow">
+      <h2 class="section-title">Analyze your resume</h2>
+      <p class="section-sub">Your file is processed in memory and is never stored.</p>
+
+      <form id="uploadForm" class="upload-card" novalidate>
+        <label id="dropzone" class="dropzone" for="resumeInput" tabindex="0">
+          <input type="file" id="resumeInput" name="resume" accept=".pdf,.docx,.txt" hidden />
+          <div class="drop-icon">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          </div>
+          <div class="drop-title" id="dropTitle">Drag and drop your resume here</div>
+          <div class="drop-sub" id="dropSub">or <span class="link">browse files</span> &middot; PDF, DOCX, TXT &middot; max 5 MB</div>
+        </label>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="level">Experience level</label>
+            <select id="level" name="level">
+              <option value="auto">Detect automatically</option>
+              <option value="fresher">Fresher / Entry level</option>
+              <option value="experienced">Experienced (3+ years)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="location">Preferred job location</label>
+            <select id="location" name="location">
+              <option>India</option>
+              <option>Remote</option>
+              <option>Bangalore</option>
+              <option>Hyderabad</option>
+              <option>Pune</option>
+              <option>Mumbai</option>
+              <option>Delhi NCR</option>
+              <option>Chandigarh</option>
+              <option>Chennai</option>
+              <option>Noida</option>
+              <option>Gurgaon</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="errorBox" class="error-box" hidden></div>
+
+        <button type="submit" id="analyzeBtn" class="btn btn-primary btn-lg btn-block">
+          <span class="btn-text">Analyze Resume</span>
+          <span class="spinner" hidden></span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="section results" id="results" hidden>
+    <div class="container">
+      <div class="results-head">
+        <div>
+          <h2 class="section-title left">Your analysis</h2>
+          <p class="muted" id="resultMeta"></p>
+        </div>
+        <div class="results-actions">
+          <button class="btn btn-ghost" id="printBtn" type="button">Download report (PDF)</button>
+          <button class="btn btn-primary" id="againBtn" type="button">Analyze another</button>
+        </div>
+      </div>
+
+      <!-- Score + breakdown -->
+      <div class="grid-2">
+        <div class="card score-card">
+          <div class="ring">
+            <svg viewBox="0 0 160 160">
+              <defs>
+                <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#0b2a6b" />
+                  <stop offset="100%" stop-color="#3b82f6" />
+                </linearGradient>
+              </defs>
+              <circle cx="80" cy="80" r="70" class="ring-bg" />
+              <circle cx="80" cy="80" r="70" class="ring-fg" id="ringFg" />
+            </svg>
+            <div class="ring-text">
+              <span id="scoreNum">0</span>
+              <small>out of 100</small>
+            </div>
+          </div>
+          <div class="grade" id="gradeBadge">-</div>
+          <div class="stat-row">
+            <div><b id="statWords">0</b><span>Words</span></div>
+            <div><b id="statSkills">0</b><span>Tech skills</span></div>
+            <div><b id="statVerbs">0</b><span>Action verbs</span></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Score breakdown</h3>
+          <div id="breakdown" class="breakdown"></div>
+        </div>
+      </div>
+
+      <!-- Jobs -->
+      <div class="block-head">
+        <h3>Recommended jobs for you</h3>
+        <p class="muted">Ranked by how well your skills match. Click a site to see live openings.</p>
+      </div>
+      <div id="jobs" class="jobs"></div>
+
+      <!-- Skills + gaps -->
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="card-title">Skills we found</h3>
+          <div id="skills"></div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Skills to learn next</h3>
+          <p class="muted small">Adding these would unlock more of your top job matches.</p>
+          <div id="gaps" class="chips"></div>
+          <h3 class="card-title" style="margin-top:26px">What you did well</h3>
+          <ul id="strengths" class="check-list"></ul>
+        </div>
+      </div>
+
+      <!-- Suggestions -->
+      <div class="card">
+        <h3 class="card-title">How to improve your resume</h3>
+        <ul id="suggestions" class="suggest-list"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section" id="features">
+    <div class="container">
+      <h2 class="section-title">Everything you need to get hired</h2>
+      <p class="section-sub">Built for students and job seekers.</p>
+      <div class="features">
+        <div class="feature"><div class="f-ico c1">&#9733;</div><h4>Resume score</h4><p>A clear 0 to 100 score across contact info, sections, skills, impact and length.</p></div>
+        <div class="feature"><div class="f-ico c2">&#10003;</div><h4>Skill detection</h4><p>Detects 100+ technologies and groups them by category automatically.</p></div>
+        <div class="feature"><div class="f-ico c3">&#9906;</div><h4>Job matching</h4><p>Matches your skills with 13 popular tech roles and shows match percentage.</p></div>
+        <div class="feature"><div class="f-ico c4">&#8599;</div><h4>Direct apply links</h4><p>One click to live openings on LinkedIn, Naukri, Indeed, Internshala and Glassdoor.</p></div>
+        <div class="feature"><div class="f-ico c5">&#9998;</div><h4>Improvement tips</h4><p>Prioritised suggestions so you know exactly what to fix first.</p></div>
+        <div class="feature"><div class="f-ico c6">&#128274;</div><h4>Private by design</h4><p>Files are read in memory and deleted immediately. Nothing is saved.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>&copy; <span id="year"></span> ResumeIQ &middot; Full Stack Training Project</span>
+      <span class="muted">Built with HTML, CSS, JavaScript, Node.js &amp; Express</span>
+    </div>
+  </footer>
+
+  <script src="js/dom.js"></script>
+  <script src="js/helpers.js"></script>
+  <script src="js/results.js"></script>
+  <script src="js/upload.js"></script>
+  <script src="js/actions.js"></script>
+</body>
+</html>

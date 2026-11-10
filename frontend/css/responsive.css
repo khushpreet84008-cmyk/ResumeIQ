@@ -1,0 +1,21 @@
+@media (max-width: 900px) {
+  .hero-inner, .grid-2, .results .grid-2:nth-of-type(2) { grid-template-columns: 1fr; }
+  .steps, .features { grid-template-columns: 1fr; }
+  .nav-links a:not(.btn) { display: none; }
+  .hero { padding: 50px 0 60px; }
+}
+@media (max-width: 560px) {
+  .form-row { grid-template-columns: 1fr; }
+  .jobs { grid-template-columns: 1fr; }
+  .upload-card { padding: 20px; }
+}
+
+/* ---------- Print (Download report) ---------- */
+@media print {
+  .nav, .hero, #how, #analyze, #features, .footer, .results-actions { display: none !important; }
+  body { background: #fff; }
+  .card, .job { box-shadow: none; break-inside: avoid; }
+  .ring-fg, .bar > i { transition: none; }
+}
+
+

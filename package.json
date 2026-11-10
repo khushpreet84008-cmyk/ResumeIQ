@@ -1,0 +1,17 @@
+{
+  "name": "resumeiq-modular",
+  "version": "1.0.0",
+  "description": "Modular ResumeIQ resume analyzer and job recommendation website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mammoth": "^1.8.0",
+    "multer": "^1.4.5-lts.1",
+    "pdf-parse": "^1.1.1"
+  }
+}
